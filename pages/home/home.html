@@ -7,7 +7,7 @@
 <ion-content padding>
   <h2>Electricity Cost Calculator App (Single Usage)</h2>
   <p>
-    Created by: Paolo Ubales, Lucas Uson and Russell Vi
+    Created by: Paulo Ubales, Lucas Uson and Russell Vi
   </p>
   <p>
     This electricity cost calculator will-
@@ -15,4 +15,27 @@
   <p>
     Source: 
   </p>
+  <br />
+<img src= "https://cdn.jsdelivr.net/gh/CarlosUson1/Elec-Calcu-Exam@master/electricity%20emp.jpg">
+<ion-item>
+  <ion-label>Power Consumption (wattage): </ion-label>
+  <ion-input type="number" [(ngModel)] = "powcon"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Hours of Use: </ion-label>
+  <ion-input type="number" [(ngModel)] = "hour"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Cost (per kWh): </ion-label>
+  <ion-input type="number" [(ngModel)] = "cost"></ion-input>
+</ion-item>
+<br />
+<button ion-input color="secondary" (click)="calculateelec()">CALCULATE</button>
+<br />
+<ion-item *ngIf="elec">
+  <h2>Energy Consumed per day: {{elec}} kWh</h2>
+</ion-item>
+<ion-item *ngIf="cpd">
+  <h2>Electricity Cost per day: {{cpd}}</h2>
+</ion-item>
 </ion-content>
